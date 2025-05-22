@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <button id="theme-toggle">🌙</button>
+    <div id="weather-anim-bg"></div>
+    <div class="container">
+
+        <form id="search-form">
+            <input type="text" id="city-input" placeholder="Enter city name..." autocomplete="off" required>
+            <button type="submit">Search</button>
+            <button type="button" id="locate-btn" title="Use current location">📍</button>
+            <button type="button" id="fav-btn">⭐ Add to Favorites</button>
+            <button type="button" id="unfav-btn" class="hidden">❌ Remove from Favorites</button>
+        </form>
+        <div id="favorites"></div>
+        <div id="weather-card" class="hidden">
+            <h2 id="city-name"></h2>
+            <div class="weather-main">
+                <img id="weather-icon" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjMyNmlmMWxqcTF0bm12MnZpcmJpdmVxY3JteWF2Mnh1OHEwNjRuZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/f7dX92LjMkTMwMf2L9/giphy.gif" alt="Weather Icon">
+                <span id="temperature"></span>
+            </div>
+            <div class="weather-details">
+                <div><span>🌡️</span><span id="feels-like"></span></div>
+                <div><span>🌬️</span><span id="wind-speed"></span></div>
+                <div><span>💧</span><span id="humidity"></span></div>
+                <div><span>🌧️</span><span id="rain-prob"></span></div>
+                <div><span>🌅</span><span id="sunrise"></span></div>
+                <div><span>🌇</span><span id="sunset"></span></div>
+                <div><span>🔆</span><span id="uv-index"></span></div>
+                <div><span>🫧</span><span id="aqi"></span></div>
+            </div>
+        </div>
+        <div id="hourly-forecast" class="hidden"></div>
+        <div id="forecast" class="hidden"></div>
+        <div id="error-message" class="hidden"></div>
+        <!-- Weather Tip -->
+        <div id="weather-tip" class="hidden">
+            <span id="tip-icon">💡</span>
+            <span id="tip-text"></span>
+        </div>
+    </div>
+
+
+    <!-- Weather Sounds -->
+<!-- Weather Sounds -->
+<audio id="sound-rain" src="https://pixabay.com/sound-effects/calming-rain-257596/" preload="auto"></audio>
+<audio id="sound-thunder" src="https://cdn.pixabay.com/audio/2022/03/15/audio_115b9b2e2e.mp3" preload="auto"></audio>
+<audio id="sound-snow" src="https://cdn.pixabay.com/audio/2022/07/26/audio_124bfa6c8e.mp3" preload="auto"></audio>
+<audio id="sound-wind" src="https://cdn.pixabay.com/audio/2022/03/15/audio_115b9b2e2e.mp3" preload="auto"></audio>
+<audio id="sound-clear" src="https://cdn.pixabay.com/audio/2022/03/15/audio_115b9b2e2e.mp3" preload="auto"></audio>
+
+    <!-- Vanta.js & Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    <script src="src/js/main.js"></script>
+</body>
+</html>
