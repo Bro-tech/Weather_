@@ -1,9 +1,11 @@
 const apiKey = 'your api key';
 
 const form = document.getElementById('search-form');
+
 const cityInput = document.getElementById('city-input');
+
 const weatherCard = document.getElementById('weather-card');
-const cityName = document.getElementById('city-name');
+const cityName = document.getElementById('city-name'):
 const weatherIcon = document.getElementById('weather-icon');
 const temperature = document.getElementById('temperature');
 const windSpeed = document.getElementById('wind-speed');
