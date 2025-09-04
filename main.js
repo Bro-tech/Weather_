@@ -1,7 +1,6 @@
 const apiKey = 'your api key';
 
 const form = document.getElementById('search-form');
-
 const cityInput = document.getElementById('city-input');
 
 const weatherCard = document.getElementById('weather-card');
@@ -27,7 +26,7 @@ const favoritesDiv = document.getElementById('favorites');
 const weatherAnimBg = document.getElementById('weather-anim-bg');
 
 
-let currentCity = '';
+let currentCity = ' ';
 let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
 let vantaEffect = null;
 
